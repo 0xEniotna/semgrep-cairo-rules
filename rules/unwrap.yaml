@@ -1,0 +1,7 @@
+rules:
+  - id: unwrap
+    message: Use of unwrap. unwraps can panic, it is safe to use an error handling pattern like Result<T, E>.
+    languages: [cairo]
+    severity: WARNING
+    pattern: |
+      $OBJECT.unwrap()
